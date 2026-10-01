@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  padding: 24px;
+}
+
+#value {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+#message {
+  font-size: 18px;
+  color: #555;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
