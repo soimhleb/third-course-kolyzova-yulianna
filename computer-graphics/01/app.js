@@ -61,6 +61,26 @@ function lineDDA(x1, y1, x2, y2) {
   return steps; // возвращаем журнал
 }
 
+// Рисуем сетку для наглядности
+function drawGrid() {
+  ctx.strokeStyle = '#e0e0e0';
+  ctx.lineWidth = 1;
+
+  for (let x = 0; x <= LOGICAL_WIDTH; x += 1) {
+    ctx.beginPath();
+    ctx.moveTo(x * scale, 0);
+    ctx.lineTo(x * scale, canvas.height);
+    ctx.stroke();
+  }
+
+  for (let y = 0; y <= LOGICAL_HEIGHT; y += 1) {
+    ctx.beginPath();
+    ctx.moveTo(0, y * scale);
+    ctx.lineTo(canvas.width, y * scale);
+    ctx.stroke();
+  }
+}
+
 const x1Input = document.querySelector('#x1');
 const y1Input = document.querySelector('#y1');
 const x2Input = document.querySelector('#x2');
