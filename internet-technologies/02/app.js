@@ -89,6 +89,8 @@ addBtn.addEventListener('click', () => {
 
   const num = Number(raw);
 
+  // type="number" отфильтровывает буквы, поэтому 'abc' сюда не дойдёт; эта проверка сработает только в случае, если поле станет type="text"
+  //(или если значение придёт иным путём)
   if (!Number.isFinite(num)) {
     showError('Это не число');
     return;
