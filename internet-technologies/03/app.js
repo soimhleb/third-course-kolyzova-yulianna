@@ -1,4 +1,4 @@
-const API_URL = 'https://dummyjson.com/users';
+const API_URL = 'https://corsproxy.io/?url=https%3A%2F%2Fjsonplaceholder.typicode.com%2Fusers';
 
 const state = {
   users: [],
