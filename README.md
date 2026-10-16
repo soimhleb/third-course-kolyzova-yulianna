@@ -10,3 +10,4 @@
 ### Компьютерная графика
 - [Занятие 1. Растровая графика, пиксели и алгоритм ЦДА](https://soimhleb.github.io/third-course-kolyzova-yulianna/computer-graphics/01/)
 - [Занятие 2. Алгоритм Брезенхема для отрезка](https://soimhleb.github.io/third-course-kolyzova-yulianna/computer-graphics/02/)
+- [Занятие 3. Растеризация окружности: алгоритм средней точки](https://soimhleb.github.io/third-course-kolyzova-yulianna/computer-graphics/03/)
