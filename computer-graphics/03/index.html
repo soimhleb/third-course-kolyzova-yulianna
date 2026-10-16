@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Растеризация окружности</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Окружность: алгоритм средней точки</h1>
+
+  <div class="controls">
+    <label>cx <input type="number" id="cx" value="20"></label>
+    <label>cy <input type="number" id="cy" value="15"></label>
+    <label>r  <input type="number" id="r"  value="5" min="1"></label>
+    <button id="build">Построить</button>
+  </div>
+
+  <div class="controls">
+    <label>
+      <input type="checkbox" id="symmetryMode">
+      Режим симметрии (выделить точки одного шага)
+    </label>
+  </div>
+
+  <p id="error" class="error"></p>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <div class="columns">
+    <section>
+      <h2>Шаги</h2>
+      <table id="steps">
+        <thead>
+          <tr>
+            <th>шаг</th>
+            <th>x</th>
+            <th>y</th>
+            <th>d до</th>
+            <th>выбор</th>
+            <th>d после</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Сравнение с формулой</h2>
+      <button id="compare">Сравнить текущий радиус</button>
+      <div id="compareResult"></div>
+
+      <h3>Замер скорости</h3>
+      <button id="benchmark">Запустить (5 прогонов по 1000 окружностей)</button>
+      <pre id="benchmarkResult"></pre>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
