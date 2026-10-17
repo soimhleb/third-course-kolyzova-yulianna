@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD — публикации</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Публикации</h1>
+
+    <section class="controls">
+      <button id="loadBtn">Загрузить</button>
+      <input id="filterInput" type="text" placeholder="Поиск по заголовку или тексту">
+    </section>
+
+    <p id="status"></p>
+
+    <section class="form-section">
+      <h2 id="formTitle">Новая публикация</h2>
+      <form id="postForm">
+        <label>
+          Заголовок
+          <input id="titleInput" type="text" required>
+        </label>
+        <label>
+          Текст
+          <textarea id="bodyInput" required rows="4"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="saveBtn">Сохранить</button>
+          <button type="button" id="cancelBtn">Отмена</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="posts" class="posts"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
