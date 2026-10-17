@@ -1,3 +1,5 @@
+let nextLocalId = 101;
+
 const PROXY = 'https://cors-anywhere.herokuapp.com/';
 const API_URL = PROXY + 'https://jsonplaceholder.typicode.com/posts';
 
@@ -57,6 +59,10 @@ async function createPost(data) {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const created = await response.json();
 
+    // JSONPlaceholder всегда возвращает id: 101 — перезаписываем,
+    // чтобы каждая локальная запись имела уникальный id
+    created.id = nextLocalId++;
+    
     // Добавляем в начало списка (свежее — сверху)
     state.posts.unshift(created);
     resetForm();
