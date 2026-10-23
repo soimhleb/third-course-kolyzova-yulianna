@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отсечение Коэна–Сазерленда</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Отсечение отрезков: Коэн–Сазерленд</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Окно</legend>
+      <label>xmin <input type="number" id="xmin" value="10"></label>
+      <label>ymin <input type="number" id="ymin" value="5"></label>
+      <label>xmax <input type="number" id="xmax" value="30"></label>
+      <label>ymax <input type="number" id="ymax" value="20"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Отрезок</legend>
+      <label>x1 <input type="number" id="x1" value="2"></label>
+      <label>y1 <input type="number" id="y1" value="2"></label>
+      <label>x2 <input type="number" id="x2" value="36"></label>
+      <label>y2 <input type="number" id="y2" value="25"></label>
+    </fieldset>
+  </div>
+
+  <div class="controls">
+    <button id="build">Построить</button>
+    <button id="polylineBtn">Ломаная</button>
+    <button id="randomBtn">Случайные отрезки</button>
+  </div>
+
+  <p id="error" class="error"></p>
+
+  <div class="codes">
+    <span>A: <b id="codeA">0000</b></span>
+    <span>B: <b id="codeB">0000</b></span>
+  </div>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <h2>Шаги алгоритма</h2>
+  <table id="steps">
+    <thead>
+      <tr>
+        <th>шаг</th>
+        <th>A</th>
+        <th>codeA</th>
+        <th>B</th>
+        <th>codeB</th>
+        <th>действие</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="stats"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
