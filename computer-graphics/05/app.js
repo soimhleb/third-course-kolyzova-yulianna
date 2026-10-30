@@ -85,16 +85,16 @@ function renderAll(fillCells = [], color = '#e6194b') {
   clearCanvas();
   drawGrid();
 
+  // Заливка
+  for (const [x, y] of fillCells) {
+    putPixel(x, y, color);
+  }
+  
   // Контур
   for (let y = 0; y < LOGICAL_HEIGHT; y += 1) {
     for (let x = 0; x < LOGICAL_WIDTH; x += 1) {
       if (baseGrid[y][x] === BORDER) putPixel(x, y, '#333');
     }
-  }
-
-  // Заливка
-  for (const [x, y] of fillCells) {
-    putPixel(x, y, color);
   }
 
   // Точка старта
@@ -176,7 +176,12 @@ function scanlineFill(points) {
       const xEnd = Math.floor(xs[i + 1]);
 
       for (let x = xStart; x <= xEnd; x += 1) {
-        if (x >= 0 && x < LOGICAL_WIDTH) filled.push([x, y]);
+        if (x >= 0 && x < LOGICAL_WIDTH) {
+          // Не закрашиваем, если это граница
+          if (baseGrid[y][x] !== BORDER) {
+            filled.push([x, y]);
+          }
+        }
       }
       intervals.push([xStart, xEnd]);
     }
