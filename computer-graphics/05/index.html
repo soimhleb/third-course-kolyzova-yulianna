@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заполнение областей</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Заполнение областей: Flood Fill и Scanline</h1>
+
+  <div class="controls">
+    <label>Полигон
+      <select id="presetSelect">
+        <option value="rect">Прямоугольник</option>
+        <option value="triangle">Треугольник</option>
+        <option value="pentagon">Выпуклый пятиугольник</option>
+        <option value="concave">Невыпуклый (L-форма)</option>
+        <option value="open">Разомкнутый контур</option>
+      </select>
+    </label>
+    <button id="buildBtn">Построить контур</button>
+  </div>
+
+  <div class="controls">
+    <button id="floodBtn">Flood Fill</button>
+    <button id="scanBtn">Scanline Fill</button>
+    <button id="compareBtn">Сравнить</button>
+    <button id="benchBtn">Замер скорости</button>
+  </div>
+
+  <div class="controls">
+    <label>Шаг заливки
+      <input type="range" id="stepSlider" min="0" max="0" value="0">
+    </label>
+    <span id="stepLabel">0 / 0</span>
+  </div>
+
+  <div class="controls">
+    <label>y для таблицы <input type="number" id="rowY" value="15"></label>
+    <button id="rowBtn">Показать строку</button>
+  </div>
+
+  <p id="error" class="error"></p>
+  <p id="hint" class="hint">Кликните по Canvas, чтобы задать стартовую точку заливки</p>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <h2>Строка y</h2>
+  <div id="rowInfo"></div>
+
+  <h2>Статистика</h2>
+  <div id="stats"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
