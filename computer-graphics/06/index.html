@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отсечение Сазерленда-Ходжмана</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Отсечение многоугольника</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Окно отсечения</legend>
+      <label>xmin <input type="number" id="xmin" value="10"></label>
+      <label>xmax <input type="number" id="xmax" value="30"></label>
+      <label>ymin <input type="number" id="ymin" value="5"></label>
+      <label>ymax <input type="number" id="ymax" value="20"></label>
+    </fieldset>
+    
+    <label>Этап:
+      <select id="stageSelect">
+        <option value="original">Исходный</option>
+        <option value="left">После LEFT</option>
+        <option value="right">После RIGHT</option>
+        <option value="top">После TOP</option>
+        <option value="bottom">После BOTTOM</option>
+      </select>
+    </label>
+    <button id="buildBtn">Построить</button>
+  </div>
+
+  <p id="error" class="error"></p>
+  <p class="hint">Исходный многоугольник задан в коде (невыпуклый). Окно отсечения можно менять.</p>
+
+  <div class="columns">
+    <section>
+      <canvas id="canvas" width="600" height="450"></canvas>
+    </section>
+
+    <section>
+      <h2>Промежуточные результаты</h2>
+      <table id="resultsTable">
+        <thead>
+          <tr><th>Этап</th><th>Число вершин</th><th>Координаты</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
