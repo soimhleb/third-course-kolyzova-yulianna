@@ -54,6 +54,9 @@
 
 ## 8. Скриншот исходной и преобразованной фигур
 <img width="1462" height="939" alt="изображение" src="https://github.com/user-attachments/assets/68fe235d-7366-4f63-b13e-5b65fa1f87e9" />
+
 *Режим A*
+
 <img width="1461" height="942" alt="изображение" src="https://github.com/user-attachments/assets/d4031143-e230-448a-babb-9a63395ccee7" />
+
 *Режим B*
