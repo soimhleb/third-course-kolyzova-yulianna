@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Геометрические преобразования</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Редактор геометрических преобразований</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Параметры</legend>
+      <label>Перенос (tx, ty): <input id="tx" type="number" value="0"> <input id="ty" type="number" value="0"></label>
+      <label>Масштаб (sx, sy): <input id="sx" type="number" value="1" step="0.1"> <input id="sy" type="number" value="1" step="0.1"></label>
+      <label>Угол (°): <input id="angle" type="number" value="0"></label>
+      <label>Центр (cx, cy): <input id="cx" type="number" value="20"> <input id="cy" type="number" value="15"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Порядок операций</legend>
+      <label><input type="radio" name="mode" value="A" checked> A: Сначала поворот/масштаб, потом перенос</label>
+      <label><input type="radio" name="mode" value="B"> B: Сначала перенос, потом поворот/масштаб</label>
+    </fieldset>
+  </div>
+
+  <div class="controls">
+    <button id="applyBtn">Применить</button>
+    <button id="resetBtn">Сброс</button>
+  </div>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <div class="columns">
+    <section>
+      <h2>Итоговая матрица</h2>
+      <div id="matrix-display"></div>
+    </section>
+    <section>
+      <h2>Вершины</h2>
+      <table id="vertices-table">
+        <thead><tr><th>Вершина</th><th>X исх.</th><th>Y исх.</th><th>X новый</th><th>Y новый</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
