@@ -1,0 +1,151 @@
+body {
+  font-family: sans-serif;
+  padding: 24px;
+  margin: 0;
+}
+
+/* Блок с настройками */
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+legend {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+/* Общие стили для label */
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 4px;
+}
+
+/* Стили для полей ввода */
+input[type="number"] {
+  padding: 6px;
+  font-size: 14px;
+  width: 70px;
+  box-sizing: border-box;
+}
+
+/* Специально для радио-кнопок (чтобы текст был сбоку) */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-group label {
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.radio-group input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Кнопки */
+button {
+  padding: 8px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  height: 34px; /* Чтобы кнопки были одной высоты с полями ввода */
+}
+
+/* Холст */
+canvas {
+  border: 1px solid #333;
+  background: white;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* Две колонки: Матрица и Таблица вершин */
+.columns {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.columns section {
+  flex: 1;
+  min-width: 300px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Таблица вершин */
+table {
+  border-collapse: collapse;
+  font-family: monospace;
+  font-size: 13px;
+  width: 100%;
+  max-width: 500px;
+}
+
+th, td {
+  border: 1px solid #bbb;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+th { 
+  background: #f0f0f0; 
+}
+
+/* Блок вывода итоговой матрицы */
+#matrix-display {
+  background: #f7f7f7;
+  padding: 16px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Стилизация таблицы именно для матрицы */
+#matrix-display table {
+  width: auto;
+  border: none;
+  margin: 0;
+}
+
+#matrix-display td {
+  border: none;
+  padding: 4px 12px;
+  text-align: right;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+/* Текст ошибки (если понадобится) */
+.error {
+  color: #c00;
+  min-height: 20px;
+  font-weight: bold;
+  margin: 0;
+}
