@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мои книги</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Мои книги</h1>
+    
+    <!-- Форма создания -->
+    <form id="book-form">
+      <input type="text" id="title-input" placeholder="Название книги">
+      <input type="text" id="author-input" placeholder="Автор">
+      <button type="submit">Добавить</button>
+    </form>
+
+    <p id="message"></p>
+    <button id="refresh-btn">Обновить список</button>
+    
+    <!-- Список книг -->
+     <!-- Вставь это перед <ul id="book-list"> -->
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="Поиск по названию...">
+      
+      <select id="filter-available">
+        <option value="">Все книги</option>
+        <option value="true">В наличии</option>
+        <option value="false">Нет в наличии</option>
+      </select>
+
+      <select id="sort-select">
+        <option value="id">По ID (сначала новые)</option>
+        <option value="title">По названию (А-Я)</option>
+        <option value="author">По автору (А-Я)</option>
+      </select>
+    </div>
+
+    <div class="pagination">
+      <button id="prev-btn" disabled>Назад</button>
+      <span id="page-info">Страница 1 из 1</span>
+      <button id="next-btn" disabled>Вперёд</button>
+    </div>
+    <ul id="book-list"></ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
