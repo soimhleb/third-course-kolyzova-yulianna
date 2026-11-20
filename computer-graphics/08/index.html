@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Каркас</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>3D Каркасная модель</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Модель и Проекция</legend>
+      <label>Модель:
+        <select id="model-select">
+          <option value="cube">Куб</option>
+          <option value="pyramid">Пирамида</option>
+        </select>
+      </label>
+      <label>Проекция:
+        <select id="proj-select">
+          <option value="persp">Перспективная</option>
+          <option value="ortho">Ортографическая</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Параметры</legend>
+      <label>Поворот X: <input type="number" id="rx" value="0"></label>
+      <label>Поворот Y: <input type="number" id="ry" value="0"></label>
+      <label>Поворот Z: <input type="number" id="rz" value="0"></label>
+      <label>Масштаб: <input type="number" id="scale" value="1" step="0.1"></label>
+      <label>Расстояние (tz): <input type="number" id="tz" value="5" step="0.5"></label>
+      <label>Фокус (f): <input type="number" id="focal" value="300"></label>
+    </fieldset>
+  </div>
+
+  <div class="controls">
+    <button id="playBtn">Пауза</button>
+    <button id="resetBtn">Сброс</button>
+  </div>
+
+  <div class="columns">
+    <canvas id="canvas" width="600" height="600"></canvas>
+    
+    <div>
+      <h2>Матрица модели 4×4</h2>
+      <div id="matrix-display"></div>
+      
+      <h2>Вершина P0</h2>
+      <table id="vertex-table">
+        <thead>
+          <tr><th>Этап</th><th>X</th><th>Y</th><th>Z</th></tr>
+        </thead>
+        <tbody>
+          <tr id="v-orig"><td>Исходная</td><td>-1</td><td>-1</td><td>-1</td></tr>
+          <tr id="v-trans"><td>После матрицы</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr id="v-screen"><td>Экранная</td><td colspan="2">-</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
