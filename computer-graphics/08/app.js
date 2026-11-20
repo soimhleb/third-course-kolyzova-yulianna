@@ -253,6 +253,7 @@ document.querySelector('#resetBtn').addEventListener('click', () => {
   document.querySelector('#rz').value = 0;
   document.querySelector('#scale').value = 1;
   document.querySelector('#tz').value = 5;
+  document.querySelector('#focal').value = 300;
   document.querySelector('#model-select').value = 'cube';
   document.querySelector('#proj-select').value = 'persp';
   angleY = 0;
