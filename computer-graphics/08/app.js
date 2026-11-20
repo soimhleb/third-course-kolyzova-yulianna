@@ -244,7 +244,7 @@ document.querySelectorAll('input, select').forEach(el => {
 
 document.querySelector('#playBtn').addEventListener('click', (e) => {
   playing = !playing;
-  e.target.textContent = playing ? 'Пауза' : 'Играть';
+  e.target.textContent = playing ? 'Пауза' : 'Запуск';
 });
 
 document.querySelector('#resetBtn').addEventListener('click', () => {
