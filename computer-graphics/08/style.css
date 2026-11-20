@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 24px;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+legend {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 6px;
+  color: #555;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #444;
+  gap: 4px;
+}
+
+input[type="number"], select {
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 80px;
+  box-sizing: border-box;
+}
+
+select {
+  width: auto;
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background-color: #eee;
+  transition: background-color 0.2s;
+  height: 34px; /* Чтобы кнопки были вровень с полями */
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.columns {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+canvas {
+  border: 1px solid #333;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+#vertex-table {
+  border-collapse: collapse;
+  font-family: monospace;
+  font-size: 13px;
+  width: 100%;
+  max-width: 350px;
+  background-color: #fff;
+}
+
+#vertex-table th, 
+#vertex-table td {
+  border: 1px solid #bbb;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+#vertex-table th {
+  background-color: #f0f0f0;
+}
+
+#matrix-display {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+#matrix-display table {
+  border-collapse: collapse;
+  margin: 0;
+}
+
+#matrix-display td {
+  border: none;
+  padding: 4px 12px;
+  text-align: right;
+  font-family: monospace;
+  font-size: 14px;
+}
