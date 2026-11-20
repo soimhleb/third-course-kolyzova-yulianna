@@ -110,8 +110,10 @@ edges: [
 8. **Сброс:** Кнопка восстанавливает исходные параметры.
 
 ## 9. Скриншоты обеих проекций
+
 ### Ортографическая проекция
 <img width="970" height="890" alt="изображение" src="https://github.com/user-attachments/assets/93aeb5c5-8c43-4204-9fe5-f0c881232864" />
+
 ### Перспективная проекция
 <img width="981" height="880" alt="изображение" src="https://github.com/user-attachments/assets/d1228e08-0404-44b5-a7a8-58253a77f28e" />
 
